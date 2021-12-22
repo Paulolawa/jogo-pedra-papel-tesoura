@@ -1,0 +1,67 @@
+<html>
+<body>
+    <style>
+     .player-options img,
+     .enemy-options img{
+         width: 200px;
+         opacity: 0.3;
+         cursor: pointer;
+     }
+     .alin{
+         display: flex;
+     }
+     .player-options,
+     .enemy-options{
+         width: 50%;
+     }
+
+    </style>
+
+<h1 style="text-align: center;">pedra papel ou tesoura</h1>
+
+<hr>
+<div class="alin">
+<div class="player-options">
+    <div><img src="pedra.jpg"/></div>
+    <div><img src="images.jpg"/></div>
+    <div><img src="papel.png"/></div>
+
+</div>
+
+
+<div class="enemy-options">
+    <div><img src="pedra.jpg"/></div>
+    <div><img src="images.jpg"/></div>
+    <div><img src="papel.png"/></div>
+</div>
+</div>
+<script>
+
+var elementos = document.querySelectorAll('.player-options div > img');
+function resetOpacityPlayer(){
+    for (var i = 0; i < elementos.length; i++){
+        elementos[i].style.opacity=0,3
+}
+for(var i = 0; i<elementos.length; i++){
+ elementos[i].addEventListener('click',function(t){
+     
+  t.target.style.opacity = 1;
+  resetOpacityPlayer();
+ });
+
+ }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
